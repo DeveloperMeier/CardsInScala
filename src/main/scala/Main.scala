@@ -1,13 +1,14 @@
 package cards
 
-import cards.deck.Deck
+import cards.deck.Deck.Deck
+import cards.deck.DeckHandler
 import cards.shoe.Shoe
 
 object Main {
 
   def main(args: Array[String]):Unit = {
-    val d = new Deck()
-    val filledDeck = d.build
+    val d = new DeckHandler()
+    val filledDeck: Deck = d.build
     println(d.validate(filledDeck))
     d.deal(filledDeck, 10, 5).map(c => {
       val playerId = c._1

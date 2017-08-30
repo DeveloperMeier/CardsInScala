@@ -2,9 +2,12 @@ package cards.deck
 
 import cards.card._
 
-
-class Deck {
+object Deck {
   type Deck = Seq[Card]
+}
+
+class DeckHandler {
+  import Deck._
 
 
   def build: Deck = {
